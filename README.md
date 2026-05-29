@@ -1,16 +1,14 @@
-# React + Vite
+# Проект по дисцеплине "Сайтостроение"
+Выполнили:
+Хараху А. А.
+Егорова Е. М.
+Ушаков А. И.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Тема проекта: Пекарня "Маковка"
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+«Маковка» открылась с простой идеей – вернуть людям вкус настоящего домашнего хлеба и десертов. Мы не используем замороженные полуфабрикаты: каждое утро наша команда пекарей замешивает тесто вручную.
 
-## React Compiler
+Наша миссия – дарить радость через выпечку. Мы гордимся тем, что наши клиенты становятся друзьями, а аромат свежих булочек собирает очереди с самого утра.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Приходите к нам на чашку кофе с маковым рулетом – и вы почувствуете разницу.
