@@ -1,0 +1,708 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, #root {
+    font-family: "Roboto", sans-serif;
+    background-color: #fdf8f5;
+    color: #5c3a21;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    width: 100%;
+    animation: fadeInPage 0.4s ease-in-out;
+}
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.page-transition-out {
+    animation: fadeOutPage 0.2s forwards;
+}
+
+@keyframes fadeOutPage {
+    to {
+        opacity: 0;
+    }
+}
+
+main {
+    flex: 1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    overflow-x: hidden;
+}
+
+
+h1,
+h2,
+h3,
+.logo {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #8b5a2b;
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+
+.header {
+    background-color: #8b5a2b;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.nav a:hover,
+.nav a.active {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+
+.btn {
+    display: inline-block;
+    background-color: #8b5a2b;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: #8b5a2b;
+}
+
+.btn-primary:hover {
+    background-color: #6b4220;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+    background-color: #c99e6f;
+}
+
+.btn-secondary:hover {
+    background-color: #b07d4b;
+    transform: translateY(-2px);
+}
+
+
+.hero {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("images/main.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 5rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+
+.advantages {
+    padding: 2rem 0 4rem;
+}
+
+.advantages-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.advantage-card {
+    background: white;
+    padding: 2rem 1.5rem;
+    border-radius: 30px;
+    text-align: center;
+    flex: 1;
+    min-width: 220px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.advantage-card:hover {
+    transform: translateY(-5px);
+}
+
+.advantage-card i {
+    font-size: 2.5rem;
+    color: #8b5a2b;
+    margin-bottom: 1rem;
+}
+
+.product-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+    
+    
+    position: relative; 
+    
+
+    width: 260px;
+    min-width: 260px;
+    height: 420px; 
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.product-card-content {
+    padding: 1.2rem;
+}
+
+.product-card-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-weight: bold;
+    color: #8b5a2b;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+
+.product-card-content .btn-secondary {
+    position: absolute;
+    bottom: 15px;       
+    left: 20px;         
+    width: max-content; 
+}
+.price {
+    font-weight: bold;
+    color: #8b5a2b;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+
+@media (min-width: 769px) {
+    .category-section {
+        margin-bottom: 3rem;
+        width: 100%;
+    }
+
+    .category-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+        gap: 1rem;
+    }
+
+    .category-header h2 {
+        margin-bottom: 0;
+        padding-left: 0.8rem;
+        font-size: 1.8rem;
+    }
+
+    .scroll-buttons {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .scroll-btn {
+        background-color: #8b5a2b;
+        border: none;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: bold;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.2s;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .scroll-btn:hover {
+        background-color: #6b4220;
+        transform: scale(1.05);
+    }
+
+    .horizontal-scroll {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        scrollbar-width: none;
+    }
+    .horizontal-scroll::-webkit-scrollbar {
+        display: none;
+    }
+
+    .scroll-container {
+        display: flex;
+        gap: 1.5rem;
+        width: max-content;
+        padding: 0.5rem 0.5rem 1rem 0.5rem;
+    }
+
+    .scroll-container .product-card {
+        flex: 0 0 260px;
+        width: 260px;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 1rem;
+        padding-top: 1rem;
+    }
+    .nav.open {
+        display: flex;
+    }
+    .header-container {
+        flex-wrap: wrap;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .advantages-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .advantage-card {
+        width: 100%;
+    }
+    .contacts {
+        flex-direction: column;
+    }
+
+
+    .category-section {
+        margin-bottom: 2rem;
+    }
+    .category-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 1rem;
+    }
+    .category-header h2 {
+        font-size: 1.5rem;
+        border-left: 4px solid #8b5a2b;
+        padding-left: 0.6rem;
+    }
+
+    .scroll-buttons {
+        display: none;
+    }
+
+    .horizontal-scroll {
+        overflow-x: visible;
+        overflow-y: visible;
+    }
+    .scroll-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+        padding: 0;
+    }
+    .scroll-container .product-card {
+        flex: 1 1 auto;
+        width: 100%;
+        margin-bottom: 0;
+    }
+    .product-card img {
+        height: 180px;
+    }
+    .product-card-content h3 {
+        font-size: 1.2rem;
+    }
+    .price {
+        font-size: 1.1rem;
+    }
+}
+
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.aboutText,
+.aboutImage {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+}
+
+.aboutImage img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.aboutText p {
+    margin-bottom: 1rem;
+}
+
+
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.contact-info,
+.contact-form {
+    flex: 1;
+    min-width: 280px;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info p {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.contact-info i {
+    width: 1.5rem;
+    color: #8b5a2b;
+}
+
+.map {
+    margin-top: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-family: inherit;
+}
+
+.contact-form textarea {
+    border-radius: 20px;
+    resize: vertical;
+}
+
+.error-message {
+    color: #d9534f;
+    font-size: 0.8rem;
+    margin: -0.3rem 0 0.8rem 0;
+}
+
+.success-message {
+    color: #5cb85c;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+
+.footer {
+    background-color: #5c3a21;
+    color: #fdf8f5;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer .socials {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.footer .socials a {
+    color: #fdf8f5;
+    font-size: 1.4rem;
+    transition: opacity 0.3s;
+}
+
+.footer .socials a:hover {
+    opacity: 0.7;
+}
+
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.6s ease-out,
+        transform 0.6s ease-out;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.product-card,
+.advantage-card {
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+.horizontal-scroll {
+    will-change: scroll-position;
+    scroll-behavior: smooth;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .fade-up,
+    .product-card,
+    .advantage-card {
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+    }
+}
+
+
+.vsplivashka-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.vsplivashka-card {
+    background: #fdf8f5;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 30px;
+    padding: 2.5rem;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.vsplivashka-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: #8b5a2b;
+    cursor: pointer;
+    line-height: 1;
+    transition: transform 0.2s;
+}
+
+.vsplivashka-close:hover {
+    transform: scale(1.1);
+}
+
+.vsplivashka-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.vsplivashka-image {
+    flex: 1;
+    min-width: 280px;
+}
+
+.vsplivashka-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.modal-info {
+    flex: 1.2;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 4rem; 
+}
+
+.modal-info h2 {
+    font-size: 2rem;
+    color: #8b5a2b;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.modal-price {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #8b5a2b;
+    margin-bottom: 1.5rem;
+}
+
+.modaldetails p {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.kbju-badge, .allergen-badge {
+    display: inline-block;
+    background: #eecdab;
+    padding: 0.2rem 0.6rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/*кнопка «В корзину» снизу справа */
+.modal-buy-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.8rem 2rem;
+}
+
+/* анимка появления */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.9) translateY(20px); opacity: 0; }
+    to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+/* Адаптивность для мобилок */
+@media (max-width: 600px) {
+    .vsplivashka-card {
+        padding: 1.5rem;
+    }
+    .modal-buy-btn {
+        position: static;
+        margin-top: 1.5rem;
+        width: 100%;
+    }
+    .modal-info {
+        padding-bottom: 0;
+    }
+}
