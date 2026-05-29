@@ -6,13 +6,13 @@ const Home = () => {
     <main>
       
       <section 
-        className="hero" 
+        className="mainIMG" 
         style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/images/main.jpg')` }}
       >
         <div className="container">
           <h1>Добро пожаловать в «Маковку»</h1>
           <p>Свежая выпечка, натуральные ингредиенты, уютная атмосфера</p>
-          <Link to="/products" className="btn btn-primary">
+          <Link to="/products" className="btn btn-prod">
             Смотреть продукцию →
           </Link>
         </div>

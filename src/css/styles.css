@@ -110,7 +110,7 @@ h1 {
     text-decoration: underline;
 }
 
-.mobile-menu-toggle {
+.mobile-menu-bar {
     display: none;
     background: none;
     border: none;
@@ -134,11 +134,11 @@ h1 {
     font-weight: 500;
 }
 
-.btn-primary {
+.btn-prod {
     background-color: #8b5a2b;
 }
 
-.btn-primary:hover {
+.btn-prod:hover {
     background-color: #6b4220;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -154,7 +154,7 @@ h1 {
 }
 
 
-.hero {
+.mainIMG {
     background:
         linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
         url("images/main.jpg");
@@ -166,13 +166,13 @@ h1 {
     margin-bottom: 2rem;
 }
 
-.hero h1 {
+.mainIMG h1 {
     font-size: 2.8rem;
     margin-bottom: 1rem;
     color: white;
 }
 
-.hero p {
+.mainIMG p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
@@ -338,7 +338,7 @@ h1 {
 
 @media (max-width: 768px) {
 
-    .mobile-menu-toggle {
+    .mobile-menu-bar {
         display: block;
     }
     .nav {
@@ -355,7 +355,7 @@ h1 {
     .header-container {
         flex-wrap: wrap;
     }
-    .hero h1 {
+    .mainIMG h1 {
         font-size: 2rem;
     }
     .advantages-grid {

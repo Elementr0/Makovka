@@ -7,7 +7,7 @@ const Layout = () => {
       <header className="header">
         <div className="container header-container">
           <div className="logo">Маковка</div>
-          <button className="mobile-menu-toggle" aria-label="Меню">
+          <button className="mobile-menu-bar" aria-label="Меню">
             <i className="fas fa-bars"></i>
           </button>
           <nav className="nav">

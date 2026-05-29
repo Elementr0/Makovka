@@ -100,7 +100,7 @@ const Contacts = () => {
             ></textarea>
             <div className="error-message">{errors.message}</div>
             
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-prod">
               Отправить
             </button>
             {isSuccess && (
